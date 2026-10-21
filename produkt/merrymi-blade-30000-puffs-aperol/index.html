@@ -32,18 +32,38 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="logo" href="/"><span class="logo-mark">V</span>MerryMi · VapePL</a>
-    <nav aria-label="Nawigacja główna">
-      <a href="/produkty/">Produkty</a>
-      <a href="/#modele">Modele</a>
-      <a href="/blog/">Blog</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/o-merrymi/">O marce</a>
-    </nav>
+    <nav aria-label="Nawigacja główna" class="head-nav"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-merrymi/">O marce</a></nav>
     <a class="head-cta" href="https://vapepl.com/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=header" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+    <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
   </div>
 </header>
-<div class="trust-bar wrap" role="note"><span>&#10003; Wysyłka z Polski — realizacja 24–48h</span><span>&#10003; 30 dni na zwrot</span><span>&#10003; Rabaty ilościowe do −20%</span><span>&#10003; Tylko dla osób 18+</span></div>
-<main class="wrap"><nav class="crumbs" aria-label="Ścieżka nawigacji"><a href="https://merrymi.vapepl.com/">MerryMi</a><span class="sep">›</span><a href="https://merrymi.vapepl.com/produkty/">Produkty</a><span class="sep">›</span><a href="https://merrymi.vapepl.com/model/merrymi-blade-30000-puffs/">MERRYMI BLADE 30000 PUFFS</a><span class="sep">›</span>Aperol</nav>
+<div class="nav-drawer" id="mobile-menu" hidden>
+  <div class="nav-drawer-backdrop" data-nav-close></div>
+  <div class="nav-drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-drawer-head">
+      <span class="nav-drawer-title">Menu</span>
+      <button class="nav-drawer-close" type="button" aria-label="Zamknij menu" data-nav-close>×</button>
+    </div>
+    <nav class="nav-drawer-links" aria-label="Menu mobilne"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-merrymi/">O marce</a></nav>
+    <a class="btn-buy lg nav-drawer-cta" href="https://vapepl.com/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=drawer" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+  </div>
+</div>
+<main class="wrap">
+<script>
+(function(){
+  var drawer=document.getElementById("mobile-menu");
+  var toggle=document.querySelector(".nav-toggle");
+  function open(){drawer.hidden=false;toggle.setAttribute("aria-expanded","true");document.body.classList.add("nav-open");}
+  function close(){drawer.hidden=true;toggle.setAttribute("aria-expanded","false");document.body.classList.remove("nav-open");}
+  toggle.addEventListener("click",function(){drawer.hidden?open():close();});
+  drawer.addEventListener("click",function(e){if(e.target.hasAttribute("data-nav-close"))close();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!drawer.hidden)close();});
+  // 同页锚点跳转不会卸载页面，需显式关闭抽屉
+  drawer.querySelectorAll(".nav-drawer-links a").forEach(function(a){a.addEventListener("click",close);});
+})();
+</script><nav class="crumbs" aria-label="Ścieżka nawigacji"><a href="https://merrymi.vapepl.com/">MerryMi</a><span class="sep">›</span><a href="https://merrymi.vapepl.com/produkty/">Produkty</a><span class="sep">›</span><a href="https://merrymi.vapepl.com/model/merrymi-blade-30000-puffs/">MERRYMI BLADE 30000 PUFFS</a><span class="sep">›</span>Aperol</nav>
 <div class="prod-layout">
   <div class="prod-media"><img src="/assets/img/fa8f745f6cadcccc-480.webp" alt="MERRYMI BLADE 30000 PUFFS — Aperol" width="460" height="460" fetchpriority="high" decoding="async"></div>
   <div class="prod-info">
@@ -54,20 +74,24 @@
     <a class="btn-buy lg" href="https://vapepl.com/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=product-merrymi-blade-30000-puffs-aperol" target="_blank" rel="noopener">Kup MERRYMI BLADE 30000 PUFFS na VapePL.COM</a>
     <p class="tiers-note">Darmowa realizacja zamówienia na vapepl.com · rabaty ilościowe 3+ szt. −5% … 15+ szt. −20% · 30 dni na zwrot</p>
     <section id="szybka-odpowiedz" class="panel q-answer">
-      <h2>Szybka odpowiedź</h2>
-      <p>MERRYMI BLADE 30000 PUFFS – Moc, styl i intensywny smak w kompaktowej formie
+      <div class="panel-side"></div><div class="panel-main">
+        <h2>Szybka odpowiedź</h2>
+        <p>MERRYMI BLADE 30000 PUFFS – Moc, styl i intensywny smak w kompaktowej formie
 Szukasz jednorazowego e-papierosa, który łączy ogromną wydajność, szybkie ładowanie i bogactwo aromatów? MERRYMI BLADE 30000 PUFFS to odpowiedź dla wymagających użytkowników, którzy nie chcą iść na kompromisy. Z 30 000 puffs, 26 ml e-liquidu i potężną baterią 920 mAh z portem USB Type-C, ten model zapewnia tygodnie satysfakcjonującego użytkowania w eleganckiej, przenośnej obudowie.</p>
+      </div>
     </section>
     <section class="flavor-profile panel">
-      <h2>Profil smakowy</h2>
-      <p>Wariant Aperol: profil mieszany — zbudowany z kilku komponentów — zbalansowany, wielowymiarowy smak. Do 30 000 zaciągnięć z jednego urządzenia. Obecnie w promocji 16% poniżej ceny regularnej.</p>
-      <ul class="fam-list"><li><strong>Mieszanki</strong> — zbudowany z kilku komponentów — zbalansowany, wielowymiarowy smak</li></ul>
+      <div class="panel-side"></div><div class="panel-main">
+        <h2>Profil smakowy</h2>
+        <p>Wariant Aperol: profil mieszany — zbudowany z kilku komponentów — zbalansowany, wielowymiarowy smak. Do 30 000 zaciągnięć z jednego urządzenia. Obecnie w promocji 16% poniżej ceny regularnej.</p>
+        <ul class="fam-list"><li><strong>Mieszanki</strong> — zbudowany z kilku komponentów — zbalansowany, wielowymiarowy smak</li></ul>
+      </div>
     </section>
     <h2>Specyfikacja</h2>
     <table class="spec-table"><tbody><tr><th>Marka i model</th><td>MERRYMI BLADE 30000 PUFFS</td></tr><tr><th>Liczba puffsów</th><td>30 000</td></tr><tr><th>Pojemność e-liquidu</th><td>26 ml</td></tr><tr><th>Stężenie nikotyny</th><td>5% (50 mg/ml) – sole nikotynowe</td></tr><tr><th>Pojemność baterii</th><td>920 mAh</td></tr><tr><th>Ładowanie</th><td>USB Type-C</td></tr><tr><th>Tryb inhalacji</th><td>MTL (Mouth-to-Lung)</td></tr></tbody></table>
     <h2>Inne smaki tej serii</h2>
     <div class="flavor-tags"><a class="flavor-tag" style="--cc:#0891b2" href="/produkt/merrymi-blade-30000-puffs-dragon-fruit-ice/">Dragon Fruit Ice</a><a class="flavor-tag" style="--cc:#db2777" href="/produkt/merrymi-blade-30000-puffs-honey-peach/">Honey Peach</a><a class="flavor-tag" style="--cc:#d97706" href="/produkt/merrymi-blade-30000-puffs-jager-red-energy/">Jager Red Energy</a><a class="flavor-tag" style="--cc:#16a34a" href="/produkt/merrymi-blade-30000-puffs-mr-blue-2/">Mr. Blue</a><a class="flavor-tag" style="--cc:#0891b2" href="/produkt/merrymi-blade-30000-puffs-red-energy-ice/">RED ENERGY ICE</a><a class="flavor-tag" style="--cc:#16a34a" href="/produkt/merrymi-blade-30000-puffs-red-raspberry-strawberry/">Red Raspberry Strawberry</a></div>
-    <h2>Zobacz w blogu</h2><ul class='link-list'><li><a href="/blog/30-k-merrymi-blade-co-to-koszt-1000-buchow/">30 k merrymi blade co to? Koszt 1000 buchów</a></li><li><a href="/blog/honey-peach-merrymi-opis-smaku-i-wszystko-co-musisz-wiedziec/">Honey Peach MerryMi - opis smaku i wszystko co musisz wiedziec</a></li><li><a href="/blog/merry-mi-blade-30000-czy-warto-kupic/">MerryMi Blade 30K – jak długo wytrzyma? Test jednorazowego e-papierosa</a></li><li><a href="/blog/merrymi-30k-blade-smaki-ktory-wybierzesz/">MerryMi 30K Blade Smaki – Który Wybierzesz?</a></li></ul>
+    <h2>Zobacz w blogu</h2><ul class='link-list'><li><a href="/blog/30-k-merrymi-blade-co-to-koszt-1000-buchow/">30 k merrymi blade co to? Koszt 1000 buchów</a></li><li><a href="/blog/black-dragon-ice-w-merrymi-blade-co-to-za-smak-i-ile-kosztuje/">Black Dragon Ice w MERRYMI BLADE — co to za smak i ile kosztuje</a></li><li><a href="/blog/czy-merrymi-jest-legalne/">Czy MERRYMI jest legalne?</a></li><li><a href="/blog/honey-peach-merrymi-opis-smaku-i-wszystko-co-musisz-wiedziec/">Honey Peach MerryMi - opis smaku i wszystko co musisz wiedziec</a></li></ul>
     <section id="faq">
       <h2>Najczęstsze pytania o ten wariant</h2>
       <div class="faq-list"><details><summary>Ile kosztuje wariant Aperol?</summary><div class='faq-a'>Aktualna cena to 80 zł (regularnie 95 zł, czyli rabat 16%). Przy 3+ sztukach dodatkowy rabat do −20%. Zamówienie składasz na vapepl.com.</div></details><details><summary>Czy ten smak jest dostępny?</summary><div class='faq-a'>Tak — wariant jest na stanie i gotowy do wysyłki z Polski.</div></details><details><summary>Jak smakują Mieszanki?</summary><div class='faq-a'>Zbudowany z kilku komponentów — zbalansowany, wielowymiarowy smak. Wariant jest wstępnie napełniony gotowym liquidem — wyciągasz i używasz.</div></details><details><summary>Na ile starczy 30000 puffs?</summary><div class='faq-a'>Przy 20–30 zaciągnięciach dziennie urządzenie starcza na ponad 2–3 lat codziennego używania; przy intensywniejszym tempie proporcjonalnie krócej.</div></details></div>
@@ -83,7 +107,7 @@ Szukasz jednorazowego e-papierosa, który łączy ogromną wydajność, szybkie 
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-dragon-fruit-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-dragon-fruit-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="slodycze" data-fam="fruit dessert">
   <a class="card-media" href="/produkt/merrymi-blade-30000-puffs-honey-peach/"><img src="/assets/img/fa8f745f6cadcccc-480.webp" alt="MERRYMI BLADE 30000 PUFFS — Honey Peach" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -94,7 +118,7 @@ Szukasz jednorazowego e-papierosa, który łączy ogromną wydajność, szybkie 
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-honey-peach" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-honey-peach" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="mix">
   <a class="card-media" href="/produkt/merrymi-blade-30000-puffs-jager-red-energy/"><img src="/assets/img/fa8f745f6cadcccc-480.webp" alt="MERRYMI BLADE 30000 PUFFS — Jager Red Energy" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -105,7 +129,7 @@ Szukasz jednorazowego e-papierosa, który łączy ogromną wydajność, szybkie 
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-jager-red-energy" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-jager-red-energy" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="mix">
   <a class="card-media" href="/produkt/merrymi-blade-30000-puffs-mr-blue-2/"><img src="/assets/img/fa8f745f6cadcccc-480.webp" alt="MERRYMI BLADE 30000 PUFFS — Mr. Blue" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -116,7 +140,7 @@ Szukasz jednorazowego e-papierosa, który łączy ogromną wydajność, szybkie 
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-mr-blue-2" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-mr-blue-2" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice">
   <a class="card-media" href="/produkt/merrymi-blade-30000-puffs-red-energy-ice/"><img src="/assets/img/fa8f745f6cadcccc-480.webp" alt="MERRYMI BLADE 30000 PUFFS — RED ENERGY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -127,7 +151,7 @@ Szukasz jednorazowego e-papierosa, który łączy ogromną wydajność, szybkie 
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-red-energy-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-red-energy-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/merrymi-blade-30000-puffs-red-raspberry-strawberry/"><img src="/assets/img/fa8f745f6cadcccc-480.webp" alt="MERRYMI BLADE 30000 PUFFS — Red Raspberry Strawberry" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -138,11 +162,10 @@ Szukasz jednorazowego e-papierosa, który łączy ogromną wydajność, szybkie 
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-red-raspberry-strawberry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-red-raspberry-strawberry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div></section>
 <section class="panel tiers" aria-label="Rabaty ilościowe"><div class="panel-side"></div><div class="panel-main"><h2>Rabaty ilościowe na VapePL.COM</h2><div class="tiers-grid"><div class="tier"><span class="tier-qty">3+ szt.</span><span class="tier-pct">−5%</span></div><div class="tier"><span class="tier-qty">5+ szt.</span><span class="tier-pct">−8%</span></div><div class="tier"><span class="tier-qty">10+ szt.</span><span class="tier-pct">−12%</span></div><div class="tier"><span class="tier-qty">15+ szt.</span><span class="tier-pct">−20%</span></div></div><p class="tiers-note">Im więcej sztuk, tym większa zniżka — rabat nalicza się automatycznie w koszyku.</p><p class="tiers-cta"><a class="btn-buy" href="https://vapepl.com/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=tiers" target="_blank" rel="noopener">Zamów z rabatem na VapePL.COM</a></p></div></section>
-<div class="sticky-cta"><span class="sticky-cta-info">Realizacja i płatność: <b>vapepl.com</b></span><a class="btn-buy" style="text-decoration:none" href="https://vapepl.com/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=sticky" target="_blank" rel="noopener">Kup na VapePL.COM</a></div>
 
 </main>
 <footer class="site-foot">

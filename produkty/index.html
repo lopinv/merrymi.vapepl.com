@@ -29,18 +29,38 @@
 <header class="site-head">
   <div class="wrap head-in">
     <a class="logo" href="/"><span class="logo-mark">V</span>MerryMi · VapePL</a>
-    <nav aria-label="Nawigacja główna">
-      <a href="/produkty/">Produkty</a>
-      <a href="/#modele">Modele</a>
-      <a href="/blog/">Blog</a>
-      <a href="/faq/">FAQ</a>
-      <a href="/o-merrymi/">O marce</a>
-    </nav>
+    <nav aria-label="Nawigacja główna" class="head-nav"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-merrymi/">O marce</a></nav>
     <a class="head-cta" href="https://vapepl.com/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=header" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+    <button class="nav-toggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+      <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+    </button>
   </div>
 </header>
-<div class="trust-bar wrap" role="note"><span>&#10003; Wysyłka z Polski — realizacja 24–48h</span><span>&#10003; 30 dni na zwrot</span><span>&#10003; Rabaty ilościowe do −20%</span><span>&#10003; Tylko dla osób 18+</span></div>
-<main class="wrap"><nav class="crumbs" aria-label="Ścieżka nawigacji"><a href="https://merrymi.vapepl.com/">MerryMi</a><span class="sep">›</span>Produkty</nav><h1>Wszystkie produkty MerryMi (13)</h1>
+<div class="nav-drawer" id="mobile-menu" hidden>
+  <div class="nav-drawer-backdrop" data-nav-close></div>
+  <div class="nav-drawer-panel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="nav-drawer-head">
+      <span class="nav-drawer-title">Menu</span>
+      <button class="nav-drawer-close" type="button" aria-label="Zamknij menu" data-nav-close>×</button>
+    </div>
+    <nav class="nav-drawer-links" aria-label="Menu mobilne"><a href="/produkty/">Produkty</a><a href="/#modele">Modele</a><a href="/blog/">Blog</a><a href="/faq/">FAQ</a><a href="/o-merrymi/">O marce</a></nav>
+    <a class="btn-buy lg nav-drawer-cta" href="https://vapepl.com/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=drawer" target="_blank" rel="noopener">Kup na VapePL.COM →</a>
+  </div>
+</div>
+<main class="wrap">
+<script>
+(function(){
+  var drawer=document.getElementById("mobile-menu");
+  var toggle=document.querySelector(".nav-toggle");
+  function open(){drawer.hidden=false;toggle.setAttribute("aria-expanded","true");document.body.classList.add("nav-open");}
+  function close(){drawer.hidden=true;toggle.setAttribute("aria-expanded","false");document.body.classList.remove("nav-open");}
+  toggle.addEventListener("click",function(){drawer.hidden?open():close();});
+  drawer.addEventListener("click",function(e){if(e.target.hasAttribute("data-nav-close"))close();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!drawer.hidden)close();});
+  // 同页锚点跳转不会卸载页面，需显式关闭抽屉
+  drawer.querySelectorAll(".nav-drawer-links a").forEach(function(a){a.addEventListener("click",close);});
+})();
+</script><nav class="crumbs" aria-label="Ścieżka nawigacji"><a href="https://merrymi.vapepl.com/">MerryMi</a><span class="sep">›</span>Produkty</nav><h1>Wszystkie produkty MerryMi (13)</h1>
 <p class="lead-sm">Przefiltruj po profilu smakowym lub przejdź bezpośrednio do wybranej kategorii.</p>
 <div class="flavor-filter" role="tablist" aria-label="Filtruj po kategorii smaku"><button class="chip active" data-cat="all" onclick="catFilter(this)">Wszystkie (13)</button><button class="chip" data-cat="owocowe" style="--cc:#16a34a" onclick="catFilter(this)">Owocowe (6)</button><button class="chip" data-cat="ice-menthol" style="--cc:#0891b2" onclick="catFilter(this)">Ice &amp; Menthol (3)</button><button class="chip" data-cat="slodycze" style="--cc:#db2777" onclick="catFilter(this)">Słodycze &amp; Desery (2)</button><button class="chip" data-cat="napoje" style="--cc:#d97706" onclick="catFilter(this)">Napoje (2)</button></div>
 <script>
@@ -65,7 +85,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-mr-blue-2" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-mr-blue-2" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/merrymi-blade-30000-puffs-red-raspberry-strawberry/"><img src="/assets/img/fa8f745f6cadcccc-480.webp" alt="MERRYMI BLADE 30000 PUFFS — Red Raspberry Strawberry" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -76,7 +96,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-red-raspberry-strawberry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-red-raspberry-strawberry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="mix">
   <a class="card-media" href="/produkt/merrymi-blade-30000-puffs-wicks/"><img src="/assets/img/fa8f745f6cadcccc-480.webp" alt="MERRYMI BLADE 30000 PUFFS — Wicks" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -87,7 +107,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-wicks" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-wicks" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="mix">
   <a class="card-media" href="/produkt/merrymi-blade-30000-puffs-wilderness-forest/"><img src="/assets/img/fa8f745f6cadcccc-480.webp" alt="MERRYMI BLADE 30000 PUFFS — Wilderness Forest" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -98,7 +118,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-wilderness-forest" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-wilderness-forest" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit sweet">
   <a class="card-media" href="/produkt/merrymi-blade-30000-puffs-orange-dragon/"><img src="/assets/img/fa8f745f6cadcccc-480.webp" alt="MERRYMI BLADE 30000 PUFFS — orange dragon" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -109,7 +129,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-orange-dragon" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-orange-dragon" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="owocowe" data-fam="fruit">
   <a class="card-media" href="/produkt/merrymi-blade-30000-puffs-grape-berry/"><img src="/assets/img/fa8f745f6cadcccc-480.webp" alt="MERRYMI BLADE 30000 PUFFS — grape berry" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -120,7 +140,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-grape-berry" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-grape-berry" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section><section class="block cat-block" id="kat-ice-menthol" data-cat-block="ice-menthol">
@@ -134,7 +154,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-dragon-fruit-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-dragon-fruit-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice">
   <a class="card-media" href="/produkt/merrymi-blade-30000-puffs-red-energy-ice/"><img src="/assets/img/fa8f745f6cadcccc-480.webp" alt="MERRYMI BLADE 30000 PUFFS — RED ENERGY ICE" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -145,7 +165,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-red-energy-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-red-energy-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="ice-menthol" data-fam="ice fruit">
   <a class="card-media" href="/produkt/merrymi-blade-30000-puffs-strawmelon-ice/"><img src="/assets/img/fa8f745f6cadcccc-480.webp" alt="MERRYMI BLADE 30000 PUFFS — Strawmelon Ice" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -156,7 +176,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-strawmelon-ice" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-strawmelon-ice" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section><section class="block cat-block" id="kat-slodycze" data-cat-block="slodycze">
@@ -170,7 +190,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-honey-peach" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-honey-peach" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="slodycze" data-fam="mix">
   <a class="card-media" href="/produkt/merrymi-blade-30000-puffs-summer-blaze/"><img src="/assets/img/fa8f745f6cadcccc-480.webp" alt="MERRYMI BLADE 30000 PUFFS — Summer Blaze" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -181,7 +201,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-summer-blaze" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-summer-blaze" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section><section class="block cat-block" id="kat-napoje" data-cat-block="napoje">
@@ -195,7 +215,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-aperol" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-aperol" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article><article class="card" data-cat="napoje" data-fam="mix">
   <a class="card-media" href="/produkt/merrymi-blade-30000-puffs-jager-red-energy/"><img src="/assets/img/fa8f745f6cadcccc-480.webp" alt="MERRYMI BLADE 30000 PUFFS — Jager Red Energy" loading="lazy" decoding="async" fetchpriority="low" width="240" height="240"></a>
@@ -206,7 +226,7 @@ function catFilter(btn){
       <span class="price">80 zł</span>
       <span class="price-old">95 zł</span>
     </div>
-    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-jager-red-energy" target="_blank" rel="noopener">Kup na VapePL</a>
+    <a class="btn-buy sm" href="https://vapepl.com/product/merrymi-blade-30000-puffs/?utm_source=merrymi&amp;utm_medium=affiliate&amp;utm_campaign=brand-aff&amp;utm_content=card-merrymi-blade-30000-puffs-jager-red-energy" target="_blank" rel="noopener">Kup na VapePL.COM</a>
   </div>
 </article></div>
   </section>
